@@ -1,10 +1,8 @@
 import React from "react";
-import About from "./components/About";
-import Navbar from "./components/Navbar";
-import Specials from "./components/Specials";
-import Testimonials from "./components/Testimonials";
-import Info from "./components/Info";
-import Footer from "./components/Footer";
+import About from "../components/About";
+import Specials from "../components/Specials";
+import Testimonials from "../components/Testimonials";
+import Info from "../components/Info";
 
 export default function App() {
     return (
@@ -13,7 +11,6 @@ export default function App() {
         <Specials />
         <Testimonials />
         <Info />
-        <Footer />
       </main>
     );
   }

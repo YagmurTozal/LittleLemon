@@ -1,10 +1,10 @@
 import React from "react";
-import About from "./components/About";
 import Footer from "./components/Footer";
-import Info from "./components/Info";
+import Home from "../src/components/Home";
 import Navbar from "./components/Navbar";
-import Specials from "./components/Specials";
-import Testimonials from "./components/Testimonials";
+
+import { Routes, Route, Router, BrowserRouter } from "react-router-dom";
+
 import Reservations from "./components/Reservations";
 
 // Yagmur Tozal
@@ -12,12 +12,14 @@ export default function App() {
   return (
     <main className=" text-gray-400 ">
       <Navbar />
-      <About/>
-      <Specials/>
-      <Testimonials/>
-      <Info/>
-      <Footer/>
-      <Reservations/>
+      <BrowserRouter>
+        <Routes>
+          <Route index element={<Home />} />
+          <Route path="/Home" element={<Home />} />
+          <Route path="/Reservations" element={<Reservations />} />
+        </Routes>
+      </BrowserRouter>
+      <Footer />
     </main>
   );
 }
